@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Search User using Github API</title>
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="web2.css">
+</head>
+<body>
+    <div class="container">
+        <br><br>
+        <!-- Heading for the application -->
+        <h1 class="text-center">Github Search User Application</h1>
+        <!-- Form for searching GitHub usernames -->
+        <form id="myForm" autocomplete="off" class="form-inline">
+            <div class="form-group">
+                <!-- Input field for entering the username -->
+                <input type="text" class="form-control" id="search" placeholder="Search GitHub Username" required>
+            </div>
+            <!-- Button to submit the form -->
+            <button type="submit" class="btn btn-primary">Fetch Profile</button>
+        </form>
+        <!-- Container to display the search result -->
+        <div id="result"></div>
+    </div>
+
+    <!-- JavaScript file for handling form submission -->
+    <script src="script.js"></script>
+</body>
+</html>
