@@ -60,13 +60,16 @@ function displayProfile(profile) {
     username.textContent = profile.login;
 
     var bio = document.createElement('p');
-    bio.textContent = profile.bio;
+    bio.textContent = "Bio: " + (profile.bio ? profile.bio : "No bio available");
 
-    var location = document.createElement('p');
-    location.textContent = "Location: " + (profile.location ? profile.location : "Not specified");
+    var following = document.createElement('p');
+    following.textContent = "Following: " + profile.following;
 
     var followers = document.createElement('p');
     followers.textContent = "Followers: " + profile.followers;
+
+    var location = document.createElement('p');
+    location.textContent = "Location: " + (profile.location ? profile.location : "Not specified");
 
     var repos = document.createElement('p');
     repos.textContent = "Public Repositories: " + profile.public_repos;
@@ -75,8 +78,9 @@ function displayProfile(profile) {
     resultContainer.appendChild(avatar);
     resultContainer.appendChild(username);
     resultContainer.appendChild(bio);
-    resultContainer.appendChild(location);
+    resultContainer.appendChild(following);
     resultContainer.appendChild(followers);
+    resultContainer.appendChild(location);
     resultContainer.appendChild(repos);
 }
 
