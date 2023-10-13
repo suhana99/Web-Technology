@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Objects</title>
+    <script src="web4.js"></script>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        .center {
+            text-align: center;
+        }
+        caption {
+            font-weight: bold;
+        }
+        td {
+            border: 1px solid black;
+            font-weight: bold;
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .container .js {
+            margin: 50px;
+        }
+        .container .xml {
+            margin: 50px;
+        }
+        button{
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+<h1>Blogs</h1>
+<h3>JavaScript objects</h3>
+<hr>
+<div class="container">
+    <div class="js">
+        <table width="300" height="500">
+            <caption>Essentials of Javascript</caption>
+            <tbody>
+            <tr>
+                <td rowspan="4" colspan="5">
+                    <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image" height="300px" width="350px">
+                </td>
+                <td colspan="1">BY: Suhana Kafle</td>
+            </tr>
+            <tr>
+                <td colspan="1">Read at: <span id="date">02/11/2023</span><br>
+                Time: <br><span id="time">05:07:44 AM</span>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="1">Read by: <span id="views">40</span>&nbsp;people</td>
+            </tr>
+            <tr>
+                <td colspan="1">Received comments:<span id="comments">133</span></td>
+            </tr>
+            <tr class="center">
+                <td colspan="2">
+                    <button id="statusbtn" onclick="toggle(essentialBlog, 'statusbtn', 'status')">Draft</button>
+                </td>
+
+                <td colspan="2">
+                    <button onclick="comments()">Add Comment</button>
+                </td>
+                <td colspan="1">
+                    <button onclick="read('js')">READ IT</button>
+                </td>
+                <td id="status">STATUS:<span id="statustxt">&nbsp;Archived</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="xml">
+        <table width="300" height="500">
+            <caption>AJAX and XML</caption>
+            <tr>
+                <td rowspan="4" colspan="5">
+                    <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image" height="300px" width="350px">
+                </td>
+                <td colspan="1">BY: Suhana Kafle</td>
+            </tr>
+            <tr>
+                <td colspan="1">Read at: <span id="datexml">07/05/2020</span><br>
+                Time: <br><span id="timexml">01:09:25 PM</span></td>
+            </tr>
+            <tr>
+                <td colspan="1">Read by: <span id="viewCount">80</span>&nbsp;people</td>
+            </tr>
+            <tr>
+                <td colspan="1">Received comments:<span id="commentCount">149</span></td>
+            </tr>
+            <tr class="center">
+                <td colspan="2">
+                    <button id="statusButton" onclick="toggle(ajaxBlog, 'statusButton', 'statusxml')">Publish</button>
+                </td>
+                <td colspan="2">
+                    <button id="commentInput" onclick="comment()">Add Comment</button>
+                </td>
+                <td colspan="1">
+                    <button onclick="read('xml')">READ IT</button>
+                </td>
+                <td id="statusxml">STATUS: <span id="status">&nbsp;Archived</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
